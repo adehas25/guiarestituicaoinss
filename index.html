@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Definitivo: Restituição de Contribuições ao INSS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Alpine.js for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* bg-slate-100 */
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Roboto Slab', serif;
+        }
+        /* Styling for the active accordion header */
+        .accordion-header-active {
+            background-color: #eef2ff; /* bg-indigo-50 */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-blue-800 shadow-lg sticky top-0 z-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <h1 class="text-2xl font-bold text-white">Guia de Restituição do INSS</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Hero Section -->
+        <section class="text-center bg-white rounded-2xl p-8 md:p-12 mb-12 shadow-2xl border border-gray-200">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Guia Definitivo para a Restituição de Contribuições ao INSS</h2>
+            <p class="text-lg text-gray-600">Recupere valores pagos acima do teto com este roteiro completo para segurados com múltiplas fontes de renda.</p>
+        </section>
+
+        <!-- Accordion Sections -->
+        <div class="space-y-4" x-data="{ openSection: 'intro' }">
+
+            <!-- Introduction -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+                <button @click="openSection = openSection === 'intro' ? null : 'intro'" class="w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl transition-colors" :class="{'accordion-header-active': openSection === 'intro'}">
+                    <h3 class="text-xl font-semibold text-blue-800">Introdução: O Problema do Pagamento em Duplicidade</h3>
+                    <svg class="w-6 h-6 transform transition-transform text-blue-600" :class="{ 'rotate-180': openSection === 'intro' }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div x-show="openSection === 'intro'" x-collapse>
+                    <div class="p-6 pt-2 text-gray-700 space-y-4">
+                        <p>O sistema do INSS possui um limite máximo para o salário de contribuição, o <strong>Teto do INSS</strong>. Profissionais com múltiplas fontes de renda (médicos, professores, consultores) frequentemente contribuem acima desse teto, pois cada empregador faz o desconto de forma isolada.</p>
+                        <p class="font-semibold text-red-700 bg-red-100 p-4 rounded-lg border border-red-200"><strong>Importante:</strong> Contribuir acima do teto não aumenta o valor da sua aposentadoria ou de outros benefícios. É um pagamento indevido que representa uma perda financeira.</p>
+                        <p>Este guia detalha, passo a passo, como você pode solicitar a devolução desses valores pagos a maior, transformando um processo complexo em uma jornada clara e organizada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1: Understanding Your Right -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+                <button @click="openSection = openSection === 'section1' ? null : 'section1'" class="w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl transition-colors" :class="{'accordion-header-active': openSection === 'section1'}">
+                    <h3 class="text-xl font-semibold text-blue-800">Seção 1: Entendendo o Seu Direito à Restituição</h3>
+                    <svg class="w-6 h-6 transform transition-transform text-blue-600" :class="{ 'rotate-180': openSection === 'section1' }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div x-show="openSection === 'section1'" x-collapse>
+                    <div class="p-6 pt-2 text-gray-700 space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">1.1. O Teto do INSS</h4>
+                            <p>É o valor máximo sobre o qual sua contribuição mensal é calculada. Qualquer valor de remuneração que ultrapasse o teto é desconsiderado para o cálculo do INSS e dos benefícios futuros.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">1.2. A Origem do Pagamento a Maior</h4>
+                            <p>Ocorre porque cada fonte pagadora calcula e retém o INSS sem saber quanto você ganha em outras fontes. Se a soma das suas remunerações ultrapassa o teto, você acaba pagando a mais. A responsabilidade de identificar e solicitar a devolução é do contribuinte.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">1.3. A Base Legal para a Devolução</h4>
+                            <p>O valor pago acima do teto é classificado como "pagamento indevido". Ele não gera nenhum direito futuro e, por isso, a lei garante o seu direito de reaver essa quantia.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">1.4. O Prazo para Agir: 5 Anos</h4>
+                            <p>Você tem um prazo de <strong>5 anos</strong> (60 meses) para solicitar a restituição, contados a partir da data do pagamento indevido. Valores pagos antes desse período são considerados prescritos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Preparation -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+                <button @click="openSection = openSection === 'section2' ? null : 'section2'" class="w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl transition-colors" :class="{'accordion-header-active': openSection === 'section2'}">
+                    <h3 class="text-xl font-semibold text-blue-800">Seção 2: Preparação: Documentos e Cálculos</h3>
+                    <svg class="w-6 h-6 transform transition-transform text-blue-600" :class="{ 'rotate-180': openSection === 'section2' }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div x-show="openSection === 'section2'" x-collapse>
+                    <div class="p-6 pt-2 text-gray-700 space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">2.1. Checklist de Documentação Essencial</h4>
+                            <ul class="list-disc list-inside space-y-2 pl-2">
+                                <li><strong>Contracheques (Holerites):</strong> A prova principal. Reúna todos, de todas as fontes.</li>
+                                <li><strong>Extrato do CNIS:</strong> Obtenha no "Meu INSS" para conferir os dados.</li>
+                                <li><strong>Guias da Previdência Social (GPS):</strong> Se for contribuinte individual (autônomo).</li>
+                                <li><strong>Documento de Identificação (CPF).</strong></li>
+                                <li><strong>Dados da sua conta bancária</strong> para receber a restituição.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">2.2. O Cálculo do Crédito</h4>
+                            <p>Para cada mês, some todas as remunerações e todo o INSS retido. Compare o total retido com o valor máximo de contribuição daquele mês (baseado no teto). A diferença é o valor a restituir.</p>
+                        </div>
+                         <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">2.3. Acesso ao Portal e-CAC</h4>
+                            <p>O pedido é feito online, pelo portal e-CAC da Receita Federal. Você precisará de uma conta <strong>gov.br de nível Prata ou Ouro</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: The Process -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+                 <button @click="openSection = openSection === 'section3' ? null : 'section3'" class="w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl transition-colors" :class="{'accordion-header-active': openSection === 'section3'}">
+                    <h3 class="text-xl font-semibold text-blue-800">Seção 3: O Processo de Solicitação via PER/DCOMP</h3>
+                    <svg class="w-6 h-6 transform transition-transform text-blue-600" :class="{ 'rotate-180': openSection === 'section3' }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                 <div x-show="openSection === 'section3'" x-collapse>
+                    <div class="p-6 pt-2 text-gray-700 space-y-4">
+                        <p>Com os cálculos prontos, acesse o e-CAC e siga o caminho: <strong>Restituição e Compensação > Acessar PER/DCOMP WEB.</strong></p>
+                        <ol class="list-decimal list-inside space-y-3 pl-2">
+                            <li><strong>Inicie um Novo Documento:</strong> Escolha "Pedido de Restituição".</li>
+                            <li><strong>Identifique o Crédito:</strong> No campo "Tipo de Crédito", selecione a opção crucial: <strong>"Contribuição Previdenciária Indevida ou a Maior"</strong>.</li>
+                            <li><strong>Detalhe os Valores:</strong> Insira, mês a mês, o valor a ser restituído que você apurou.</li>
+                            <li><strong>Informe seus Dados Bancários:</strong> A conta deve ser de sua titularidade.</li>
+                            <li><strong>Revise e Transmita:</strong> Confira todos os dados e transmita o pedido. Guarde o recibo gerado.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4 & 5 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+                 <button @click="openSection = openSection === 'section45' ? null : 'section45'" class="w-full text-left p-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-xl transition-colors" :class="{'accordion-header-active': openSection === 'section45'}">
+                    <h3 class="text-xl font-semibold text-blue-800">Seção 4 e 5: Após o Pedido e Análise Avançada</h3>
+                    <svg class="w-6 h-6 transform transition-transform text-blue-600" :class="{ 'rotate-180': openSection === 'section45' }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                 <div x-show="openSection === 'section45'" x-collapse>
+                    <div class="p-6 pt-2 text-gray-700 space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">Acompanhamento e Prazos</h4>
+                            <p>Você pode acompanhar o status do seu pedido no próprio portal e-CAC. O prazo legal para a Receita Federal analisar é de <strong>360 dias</strong>, mas pode variar. Seja paciente.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-gray-800">Recebimento dos Valores (Corrigidos)</h4>
+                            <p>Quando a restituição for paga, o valor virá corrigido pela <strong>taxa SELIC</strong>, compensando a inflação do período em que o dinheiro ficou com o governo.</p>
+                        </div>
+                        <div class="font-semibold text-green-800 bg-green-100 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-lg mb-2">Atenção ao Imposto de Renda (IRPF)!</h4>
+                            <p>O valor recebido da restituição (principal + juros) é um rendimento tributável. Você <strong>deve</strong> declará-lo na sua Declaração de Imposto de Renda do ano seguinte ao recebimento para evitar problemas com a malha fina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-8 py-6 bg-gray-200 border-t border-gray-300">
+        <p class="text-sm text-gray-600">
+            Criado por Adelson Elias | 
+            <a href="https://adehas25.github.io/declarafacil/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 hover:underline">
+                Declara Fácil
+            </a>
+            | Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
